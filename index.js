@@ -23,8 +23,15 @@ svg.append('circle')
 
 
 svg.append('line')
-.attr('x1', 370)
-.attr('x2', 400)
-.attr('y1', 20)
-.attr('y1', 120)
-.attr('stroke', 'red');
+    .attr('x1', 370)
+    .attr('x2', 400)
+    .attr('y1', 20)
+    .attr('y1', 120)
+    .attr('stroke', 'red');
+
+    svg.append('text')
+        .attr('x', 250)
+        .attr('y', 200)
+        .attr('fill', 'orange')
+        .text('hello world!')
+        .style('font-family', 'arial')
