@@ -10,11 +10,19 @@ const data = [
 // select the svg container first
 const svg = d3.select('svg');
 
+// add attrs to rects already in the dom
 const rect = svg.selectAll('rect')
     .data(data)
     .attr('width', (d, i, n) => d.width )
     .attr('height', (d) => d.height  )
     .attr('fill', (d) => d.fill );
 
-    console.log(rect);
+    // add attrs to rects in enter selection (see lecture 19 D3)
+   rect.enter()
+    .append('rect')
+    .attr('width', (d, i, n) => d.width )
+    .attr('height', (d) => d.height  )
+    .attr('fill', (d) => d.fill );
+
+    // console.log(rect);
     
